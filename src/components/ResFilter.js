@@ -50,7 +50,7 @@ const ResFilter = () => {
         <nav className='navbar'><img src={logo} alt="Beach Resort" /></nav>
       </div>
       <div className='filter-container'>
-        <h1>Sort restaurants in alphabetically</h1>
+        <h1>Sort restaurants alphabetically</h1>
         <div className="btn-container">
           <button onClick={toggleSortName}><p>Ascending Order</p></button>
           <button onClick={toggleListReverse}><p>Descending Order</p></button>
