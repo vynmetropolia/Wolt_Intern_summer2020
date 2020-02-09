@@ -1,38 +1,200 @@
-.App {
+@font-face { 
+  font-family: roboto-regular; 
+  src: url('./fonts/Roboto/Roboto-Regular.ttf')
+} 
+@font-face { 
+  font-family: res-name; 
+  src: url('./fonts/Sriracha/Sriracha-Regular.ttf')
+} 
+* {
+    margin: 0;
+    border-radius: 0 0 5px 5px;
+  }
+   :root {
+    --mainTransition: all 0.3s linear;
+  } 
+   body {
+    line-height: 1.4;
+    font-family: roboto-regular, sans-serif;	
+
+  } 
+
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 1rem;
+  background: #ff6f5e;
+  border-radius: 0;
+  z-index: 1;
+}
+.navbar img {
+  height: 3vh;
+}
+
+/* end of navbar */
+.filter-container {
+  background-color: #f5f0e3;
+  margin: 10%;
+
+}
+.filter-container h1 {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-container {
+  text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.btn-container button {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  outline:none;
+  font-size: 16px;
+  background-color: #ff6f5e;
+}
+.btn-container button {
+  color: #f5f0e3;
+}
+@media screen and (min-width: 700px) {
+  .filter-container {
+    margin : 5vh;   
+  }
+  
+}
+@media screen and (min-width: 1000px) {
+  .filter-container {
+    margin : 6vh
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (min-width: 1200px) {
+  .filter-container {
+    margin : 8vh
   }
 }
+ /* restaurantsList */
+  .restaurantslist-center {
+    width: 80vw; 
+    margin: 5vh auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 30px;
+    
+  }
+  
+   @media screen and (min-width: 700px) {
+    .restaurantslist-center {
+      width: 90vw;
+      margin: 3vh auto;
+    }
+  }
+
+  /* end of restaurantsList */
+
+  /* restaurant */
+  restaurant {
+      border-radius: 0 0 5px 5px ;
+  }
+
+  .restaurant:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+    transition: var(--mainTransition);
+  }
+  
+  .img-container {
+    position: relative;
+    padding: 0;
+    
+  }
+  .img-container img {
+    width: 100%;
+    display: block;
+    transition: var(--mainTransition);
+    padding-bottom: 0;
+    border-radius: 5px 5px 0 0;
+  }
+  .info-container {
+    display: flex;
+    background-color: #f5f0e3;
+    border-radius: 0 0 5px 5px;
+    height: 10vh;
+    
+  }
+  .text-container {
+    text-align: left;
+    padding: 0 10px;
+    flex-grow: 5;
+    font-size: 20px;
+  }
+  .order-i {
+    position: relative;
+  }
+  .red {
+    color: red;
+  }
+  .green {
+    color: green;
+  }
+  .res-name {
+    text-transform: capitalize;
+    font-size: 20px;
+    opacity: 0.9;
+    font-family: res-name, sans-serif;
+    
+    
+  }
+  .description {
+    opacity: 0.8;
+    font-family: roboto-regular, sans-serif;
+    font-size: 15px;
+    padding-top: 4px;
+  }
+  .checkOnline {
+    display: inline-flex;
+    border: 2px groove;
+    border-radius: 5px;
+  }
+  .on  {
+    color: #00e600;
+    padding: 3px;
+        
+  }
+  .off  {
+    color: #ff1a1a;
+    padding: 3px; 
+}
+
+  @media screen and (min-width: 700px) {
+    .img-container img {
+        width: 100%;
+        height: 30vh;
+    }
+    .info-container {
+      height: 15vh;
+    }
+    .text-container{
+      font-size: 15px;
+    }
+  }
+  @media screen and (min-width: 1250px) {
+    .img-container img {
+        height: 25vh;
+    }
+    .info-container {
+      height: 15vh;
+    }
+  }
+  /* end of restaurant  */
+  footer {
+    display: block;
+    background-color: #ff6f5e;
+    border-radius: 0 ;
+    padding: 10px;
+    text-align: center;
+  }
+
